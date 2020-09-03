@@ -1,3 +1,4 @@
+import { Company } from './company';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -21,6 +22,12 @@ export class StockExchangeService {
 
   public save(stockExchange: StockExchange) {
     return this.http.post<StockExchange>(this.stockExchangesUrl, stockExchange);
+  }
+
+  public getCompanyList(id : number) : Observable<Company[]>{
+
+    return this.http.get<Company[]>(`${this.stockExchangesUrl}/${id}/companies`);
+
   }
 
 }

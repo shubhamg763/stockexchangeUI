@@ -1,1 +1,24 @@
-<p>companylist works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Company ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">CEO</th>
+            <th scope="col">Company Code</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let company of companies">
+            <td>{{ company.companyId }}</td>
+            <td>{{ company.companyName}}</td>
+            <td>{{ company.ceo }}</td>
+            <td>{{ company.companyCode }}</td>
+            <td>{{ company.companyDetails }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

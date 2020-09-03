@@ -7,14 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AddStockExchangeComponent } from './add-stockexchange/add-stockexchange.component';
 import { StockExchangeListComponent } from './stockexchange-list/stockexchange-list.component';
-import { CompanylistComponent } from './companylist/companylist.component';
+import { CompanyListComponent } from './companylist/companylist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddStockExchangeComponent,
     StockExchangeListComponent,
-    CompanylistComponent
+    CompanyListComponent
   ],
   imports: [
     BrowserModule,

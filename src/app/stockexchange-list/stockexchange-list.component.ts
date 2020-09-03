@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
 import { StockExchangeService } from './../stockexchange.service';
 import { StockExchange } from './../stockexchange';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-stockexchange-list',
@@ -11,7 +13,7 @@ export class StockExchangeListComponent implements OnInit {
 
   stockExchanges :StockExchange[];
 
-  constructor(private stockexchangeService: StockExchangeService) { }
+  constructor(private _router : Router , private stockexchangeService: StockExchangeService) { }
 
   ngOnInit(): void {
 
@@ -20,4 +22,8 @@ export class StockExchangeListComponent implements OnInit {
     });
 }
 
+  companyList(id : number) {
+    this._router.navigate(['companyList',id]);
+
+  }
 }
